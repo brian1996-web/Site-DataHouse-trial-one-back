@@ -2,10 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const signupRoutes = require("./controllers/signupRoutes"); // Ensure this path is correct
+const signupRoutes = require("./controllers/signUpRoutes"); // Ensure this path is correct
 // const User = require("./models/signUpModel"); // Ensure this path is correct
 const loginRoutes = require("./controllers/loginRoutes");
-const siteDataRoutes =require("./controllers/siteDataRoutes");
+const siteDataRoutes = require("./controllers/siteDataRoutes");
 
 // calling the configuration to run
 const app = express();
@@ -13,9 +13,6 @@ const app = express();
 // Middleware
 app.use(express.json()); // Parse JSON requests
 app.use(cors()); // Enable CORS
-
-
-
 
 // MongoDB Connection
 mongoose
@@ -27,9 +24,9 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err));
 
 // Routes
-app.use("/signup",signupRoutes); // Ensure signupRoutes is correctly exported
-app.use("/login",loginRoutes);
-app.use("/siteData",siteDataRoutes);
+app.use("/signup", signupRoutes); // Ensure signupRoutes is correctly exported
+app.use("/login", loginRoutes);
+app.use("/siteData", siteDataRoutes);
 
 // Default Route
 app.get("/", (req, res) => {
