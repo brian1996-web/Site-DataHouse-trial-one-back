@@ -34,7 +34,7 @@ require("dotenv").config();
 console.log("MONGO_URL:", process.env.MONGO_URI); // Debugging line
 
 mongoose
-  .connect("mongodb+srv://Brian:Brian@cluster0.0kxi8.mongodb.net/database-1?retryWrites=true&w=majority&appName=Cluster0", {
+  .connect("mongodb+srv://sekulumebrian42:FrdcaaFxWF5HOcf6@cluster0.xk3bd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
    
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -61,3 +61,7 @@ app.get("/", (req, res) => {
 // Start Server
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
+
+// FrdcaaFxWF5HOcf6
+
